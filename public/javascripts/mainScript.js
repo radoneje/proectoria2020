@@ -12,8 +12,16 @@
             scrollToSmoothly(top-100,300)
         })
     })
-    document.getElementById("closeMobileMenu").addEventListener("click", (e) => {
 
+    document.querySelectorAll(".logoToTop").forEach(e=>{
+        e.addEventListener("click", (e) => {
+        closeMobileMenu();
+        scrollToSmoothly(0,300)
+    })
+
+    })
+    document.getElementById("closeMobileMenu").addEventListener("click", (e) => {
+        closeMobileMenu();
 
     })
     document.getElementById("mobileHamburger").addEventListener("click", (e) => {
