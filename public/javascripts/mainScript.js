@@ -27,7 +27,7 @@
     document.getElementById("mobileHamburger").addEventListener("click", (e) => {
 
         document.getElementById("modalMenu").classList.remove("hidden");
-        document.body.style.overflow="hidden"
+        document.body.classList.add("overflowHidden")
     })
     document.getElementById("playerMenuItem1").addEventListener("click", (e) => {
         if (e.target.classList.contains("active"))
@@ -73,6 +73,7 @@ function scrollToSmoothly(pos, time) {
 }
 function closeMobileMenu(){
     document.getElementById("modalMenu").classList.add("hidden");
-    document.body.style.overflow="initial"
+    document.body.classList.remove("overflowHidden")
+
 }
 
