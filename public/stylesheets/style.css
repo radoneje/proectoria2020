@@ -1,0 +1,1082 @@
+:root {
+    --blue1: #264795;
+    --blue2: #0D5FAA;
+    --blue3: #3D7FBB;
+    --blue4: #00B0EA;
+    --blue5: #00A6E0;
+    --blue6: #C2E9F8;
+    --gray: #B7B6B6;
+    --green1: #006A88;
+    --green2: #8ACED2;
+    --green3: #88CCD0;
+    --green4: #B6DEE1;
+    --green5: #4CBBB8;
+    --red1: #EB5752;
+    --red2: #FF7171;
+    --red3: #FF8888;
+    --red4: #FF7777;
+    --red5: #FF9999;
+    --red6: #FFAAAA;
+    --red7: #FFBBBB;
+    --red7: #FFCCCC;
+    --red9: #FFDDDD;
+    --white: #ffffff;
+    --bigPad: 60px;
+    --thiangleHeight: 176px;
+}
+
+.mainTower {
+    max-width: 1920px;
+    background-color: var(--white);
+    margin: 0 auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Proxima Nova Rg';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    background-color: var(--blue2);
+    color: #000000;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+h2 {
+    font-family: 'Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+
+h3 {
+    font-family: 'Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+h5 {
+    ont-family: 'RED_Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+h6 {
+    font-family: 'Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 31px;
+}
+
+.tower {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.head {
+    background-color: var(--blue2);
+    position: relative;
+    color: var(--white);
+}
+
+.headMenu {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: calc(10px);
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 22px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    background: var(--blue2);
+    z-index: 100;
+}
+
+.mainMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainMenuItem {
+    margin-right: 1em;
+}
+
+.bigLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 116px;
+    margin-top: var(--bigPad);
+}
+
+.bigLogo svg {
+    width: 90%;
+    max-width: 1200px;
+
+}
+
+.pgm {
+    position: relative;
+}
+
+.pgmTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to right bottom, var(--blue2) 0%, var(--blue2) 50%, transparent 50%);
+    z-index: 0;
+
+}
+
+.pgmTitle {
+    position: absolute;
+    left: var(--bigPad);
+    top: 0px;
+}
+
+.pgmDownload {
+    position: absolute;
+    right: var(--bigPad);
+    top: calc(var(--bigPad) + var(--bigPad));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pgmHead {
+    position: relative;
+}
+
+.pgmBody {
+    width: 1455px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 300px;
+}
+
+.pgmBodyTitle {
+    font-family: 'RED_Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 44.8829px;
+    line-height: 64px;
+    /* identical to box height */
+
+
+    color: var(--red1)
+}
+
+.pgmBodySubTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    color: var(--blue1)
+
+}
+
+.pgmDayBody {
+    margin-top: 103px;
+}
+
+.pgmDay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.firstDay {
+    color: #4CBBB8
+}
+
+.secondDay {
+    color: var(--red1)
+}
+
+.thirdDay {
+    color: var(--blue4)
+}
+
+.secondDay .pgmDayItemLogo svg path {
+    fill: var(--red1)
+}
+
+.thirdDay .pgmDayItemLogo svg path {
+    fill: var(--blue4)
+}
+
+.pgmDayTitle {
+    font-family: 'RED_Galiver Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 44.8829px;
+    line-height: 64px;
+    width: 338px;
+}
+
+.pgmDayItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pgmDayItemText {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+    padding-left: 1em;
+}
+
+.pgmDayDivider {
+    border-bottom: 1px solid var(--gray);
+    margin: 30px 0;
+}
+
+.pgmDecor {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: var(--bigPad);
+    margin-bottom: var(--bigPad);
+}
+
+.player {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: var(--thiangleHeight);
+}
+
+.playerBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #4CBBB8;
+    background-image: url(/images/playerBg.svg);
+    background-position: 34% 58%;
+    background-repeat: no-repeat;
+}
+
+.playerBg svg {
+
+}
+
+.playerTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to right bottom, var(--white) 0%, var(--white) 50%, transparent 50%);
+    z-index: 0;
+
+
+}
+
+.playerTitle {
+    top: 0px;
+}
+
+.playerBox {
+    position: inherit;
+    z-index: 10;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-top: 326px;
+    max-width: 1240px;
+    padding-bottom: 132px;
+}
+
+.playerMenu {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.videoWrapper iframe, .videoWrapper video, #mainVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.playerMenuItem {
+    padding: 20px 35px;
+    font-weight: 700;
+    font-size: 32.4573px;
+    line-height: 40px;
+    padding-top: 18px;
+    position: relative;
+}
+
+.playerMenuItem.active {
+    padding: 30px 35px;
+}
+
+#playerMenuItem1 {
+    background: var(--red2);
+    padding-right: 66px
+}
+
+#playerMenuItem1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 102px 60px;
+    border-color: transparent transparent var(--red2) transparent;
+}
+
+#playerMenuItem1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 102px 60px;
+    border-color: transparent transparent transparent var(--red2);
+}
+
+#playerMenuItem1.active:after {
+    z-index: 3;
+}
+
+#playerMenuItem2 {
+    background: var(--blue2);
+    padding-left: 58px;
+
+}
+
+#playerMenuItem2.active {
+    padding-right: 35px
+}
+
+#playerMenuItem2.active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 102px 60px;
+    border-color: transparent transparent var(--blue2) transparent;
+}
+
+.playerDecor1 {
+    position: absolute;
+    top: 250px;
+    left: 20%;
+}
+
+.playerDecor2 {
+    position: absolute;
+    top: 950px;
+    left: 10%;
+}
+
+.playerDecor3 {
+    position: absolute;
+    top: 987px;
+    right: 0;
+}
+
+.theme {
+    position: relative;
+    margin-top: calc(0px - var(--thiangleHeight));
+    padding-top: var(--thiangleHeight)
+}
+
+.themeTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to left top, var(--blue2) 0%, var(--blue2) 50%, transparent 50%);
+    z-index: 0;
+
+}
+
+
+.themeBox {
+    background: var(--blue2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 0;
+    padding-bottom: var(--thiangleHeight)
+}
+
+.themeBoxMobile {
+    display: none;
+}
+
+.themeItem {
+    padding: 30px 40px;
+}
+
+.org {
+    position: relative;
+    padding-top: calc(var(--thiangleHeight) + 100px);
+    padding-bottom: 176px;
+}
+
+.orgTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to right bottom, var(--blue2) 0%, var(--blue2) 50%, transparent 50%);
+    z-index: 0;
+}
+
+.orgImage img {
+    width: 100%;
+}
+
+.orgImage {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partBox {
+    margin-top: 100px
+}
+
+.partTitle {
+    margin-left: var(--bigPad);
+}
+
+.orgDecor {
+    position: absolute;
+    top: -149px;
+    left: 56%;
+}
+
+.orgDecor2 {
+    position: absolute;
+    bottom: -272px;
+    left: 56%;
+}
+
+.orgDecorIco {
+}
+
+.map {
+    position: relative;
+    padding-top: calc(var(--thiangleHeight));
+}
+
+.mapTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to left top, var(--green5) 0%, var(--green5) 50%, transparent 50%);
+    z-index: 0;
+}
+
+.mapTitle {
+    top: calc(var(--thiangleHeight) + var(--bigPad));
+}
+
+.mapBox {
+    background: var(--green5);
+}
+
+.contacts {
+    position: relative;
+    padding-top: calc(var(--thiangleHeight));
+}
+
+.contactsTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to right bottom, var(--green5) 0%, var(--green5) 50%, transparent 50%);
+    z-index: 0;
+}
+
+.contactsBox svg {
+    max-width: calc(100% - 20px);
+
+}
+
+.contactsBox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: var(--bigPad);
+}
+
+.footer {
+
+    background: var(--blue2);
+    text-align: center;
+    color: white;
+    padding: var(--bigPad)
+}
+
+.footerText {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+}
+
+.hidden {
+    display: none;
+}
+.showMobile{display: none}
+.hideMobile{ display: block }
+
+@media screen and (max-width: 1440px) {
+    .bigLogo {
+        margin-top: 0;
+    }
+
+    .headMenu {
+        font-size: 18px;
+    }
+
+    .bigLogo svg {
+        width: 66%;
+        max-width: 1200px;
+    }
+
+    .pgmBodyTitle {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .pgmBodySubTitle {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .pgmDayItemText {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .pgmDayTitle svg {
+        height: 37px;
+    }
+
+    .pgmDecor svg {
+        width: 150px;
+    }
+
+    .orgDecor {
+        top: -155px;
+    }
+
+    .orgDecor2 {
+        bottom: -265px;
+    }
+
+    .mapBox {
+        padding-top: var(--bigPad)
+    }
+
+    .themeBox {
+        display: none;
+    }
+
+    .themeBoxMobile {
+        display: block;
+        background: var(--blue2);
+        align-items: flex-start;
+        justify-content: center;
+        padding: var(--bigPad) 0;
+        padding-bottom: var(--thiangleHeight)
+    }
+
+    .themeRow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .playerBox {
+        width: calc(75%);
+    }
+
+}
+
+.mobileHamburger {
+    display: none;
+}
+
+.pgm .playerTitle {
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+
+    :root {
+        --bigPad: 40px;
+        --thiangleHeight: 136px;
+    }
+
+    .pgmTitle svg {
+        height: 70px;
+    }
+
+    .pgmDownloadIco svg {
+        height: 70px;
+    }
+
+    .pgmBody {
+        padding-top: 220px;
+    }
+
+    .playerMenuItem {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    #playerMenuItem1:after {
+        border-width: 0 0 94px 60px;
+    }
+
+    .orgDecorIco svg {
+        width: 250px;
+    }
+
+    .orgDecor {
+        top: -183px;
+        left: 72%;
+    }
+
+    .orgDecor2 {
+        bottom: -235px;
+        left: 74%;
+    }
+
+    .org {
+
+        padding-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .playerDecor2 {
+        display: none;
+    }
+
+    .orgDecor {
+        top: -185px;
+        left: 72%;
+    }
+
+    .playerDecor1 {
+        position: absolute;
+        top: 164px;
+        left: 7%;
+    }
+
+    .playerBox {
+        margin-top: 261px;
+    }
+
+    .playerBg {
+        background-position: 38% 54%;
+    }
+
+    .pgmDecor svg {
+        width: 130px;
+    }
+
+    .bigLogo {
+        padding-bottom: 0;
+    }
+
+    .mainMenu {
+        display: none;
+    }
+
+    .mobileHamburger {
+        display: block;
+        padding-right: 16px;
+        padding-top: 6px;
+        color: var(--white);
+    }
+
+    #modalMenu {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        color: white;
+        background: var(--blue2);
+    }
+
+    .modalMenuHeader {
+        display: flex;
+        padding: 16px;
+
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .modalMenuItem {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .bigLogo svg {
+        width: calc(100% - 80px)
+        /* max-width: 1200px; */
+    }
+
+    .pgmDay {
+        display: block;
+    }
+
+    .pgmDayTitle {
+        margin-bottom: var(--bigPad);
+    }
+
+    .pgmDayItemText {
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    .pgmTitle {
+        left: 0;
+    }
+
+    .playerTitle {
+        left: -40px !important;
+    }
+
+    .playerBox {
+        width: calc(100% - 40px);
+    }
+
+    .themeItem {
+        width: calc(50% - 20px);
+    }
+
+    .themeItem svg {
+        width: 100%
+    }
+
+    .footerText {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .footerLogo svg {
+        width: 50%;
+    }
+
+    .contactsTriangle, .pgmTriangle, .playerTriangle,.orgTriangle {
+        top: -1px;
+    }
+
+    .themeTriangle, .mapTriangle {
+        top: 1px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .orgTriangle {
+        top: -1px;
+    }
+
+    .pgmTitle {
+        left: -26px;
+    }
+
+    .orgDecor {
+        top: -207px;
+        left: inherit;
+        right: -125px;
+    }
+
+    .orgDecor2 {
+        bottom: -215px;
+        left: inherit;
+        right: -123px;
+        z-index: 1;
+    }
+
+    .orgImage {
+        padding: 40px 0;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .showMobile{display: block}
+    .hideMobile{ display: none }
+    :root {
+        --bigPad: 32px;
+        --thiangleHeight: 60px;
+    }
+
+    .bigLogo svg {
+        height: 75vw;
+    }
+
+    .pgmTitle {
+        top: -30px
+    }
+
+    .playerTitle {
+        top: 82px;
+    }
+
+    .playerDecor1 {
+        display: none;
+    }
+
+    .player .playerTitle {
+        display: none;
+    }
+
+    .pgm .playerTitle {
+        display: block;
+        top: inherit;
+        bottom: -53px;
+        z-index: 1;
+    }
+
+    .playerBox {
+        margin-top: 172px;
+    }
+
+    .pgmTitle {
+        top: -44px;
+        left: -78px;
+        z-index: 100;
+    }
+
+    .pgmTitle svg {
+        height: 60px;
+    }
+
+    .pgm .playerTitle {
+        left: 20px !important;
+    }
+
+    .bigLogo {
+        padding-bottom: 75px;
+    }
+
+    .playerMenuItem {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .playerMenuItem.active {
+        padding: 30px 35px;
+
+    }
+
+    #playerMenuItem1 {
+        padding: 16px 12px;
+        padding-right: 44px;
+    }
+
+    .playerMenuItem.active {
+        padding: 16px 12px;
+    }
+
+    #playerMenuItem1:after {
+        border-width: 0 0 56px 39px;
+        right: -38px;
+    }
+
+    #playerMenuItem1:before {
+        left: -38px;
+        border-width: 0 0 56px 39px;
+    }
+
+    #playerMenuItem2 {
+        padding: 16px 12px;
+        padding-left: 32px;
+    }
+
+    #playerMenuItem1.active {
+
+        padding-bottom: 30px;
+    }
+
+    #playerMenuItem2.active {
+        padding-right: 12px;
+        padding-bottom: 30px;
+    }
+
+    #playerMenuItem1.active:before {
+        border-width: 0 0 69px 39px;
+    }
+
+    #playerMenuItem1.active:after {
+        border-width: 0 0 69px 39px;
+    }
+
+    .pgmDownload {
+
+        right: -30px;
+
+    }
+
+    .themeItem {
+        padding: 20px 20px;
+    }
+
+    .playerBox {
+        padding-bottom: 140px;
+    }
+
+    .partTitle {
+        margin-left: 20px;
+    }
+
+    .partTitle svg {
+        height: 60px
+    }
+    .org {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .partBox {
+        margin-top: 0;
+    }
+    .mapTitle{
+        top:90px;
+    }
+    .mapBox{padding-bottom: 100px;}
+    .mapImage{
+        width: calc(100% - 80px);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .mapImage svg{
+        width: 100%;
+    }
+    .pgm .playerTitle {
+        left: -98px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .pgmBodyTitle {
+        font-size: 23px;
+        line-height: 32px;
+    }
+    .pgmBodySubTitle {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .pgmDayItemLogo svg {
+        width: 16px;
+    }
+    .pgmDayItemText{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .pgmDayBody{
+        margin-top:60px ;
+    }
+    .pgmDecor svg {
+        width: 85px;
+        height: 85px;
+        padding-bottom: 40px;
+    }
+    .pgmTitle svg {
+        height: 45px;
+    }
+    .pgmTitle {
+        top: -32px;
+        left: -107px;
+    }
+
+    .partTitle {
+        margin-left: -98px;
+    }
+
+    .partTitle svg {
+        height: 45px;
+    }
+    .pgm .playerTitle {
+        left: -132px !important;
+    }
+    .playerMenuItem:before, .playerMenuItem:after{
+        display: none;
+    }
+    .themeItem {
+        padding: 0px 20px;
+    }
+    .mapTitle {
+        top: 90px;
+    }
+    .contactsBox {
+        padding-bottom: 30px;
+    }
+}
+
+

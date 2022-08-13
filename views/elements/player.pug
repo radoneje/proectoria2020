@@ -1,0 +1,21 @@
+.player
+    .playerBg
+        //include svg/playerBg.svg
+    .playerTriangle
+    include playerTitle
+    .playerDecor1
+        include svg/playerDecor1.svg
+    .playerDecor2
+        include svg/playerDecor2.svg
+    .playerDecor3
+        include svg/playerDecor3.svg
+    .pgmDownload.pointer
+        .pgmDownloadIco
+            include svg/playerArchive.svg
+    .playerBox
+        .playerMenu
+            .playerMenuItem.pointer#playerMenuItem1 ДЛЯ УЧАЩИХСЯ
+            .playerMenuItem.pointer#playerMenuItem2.active ДЛЯ ПЕДАГОГОВ
+        .playerItem
+            .videoWrapper
+                video#mainVideo( class="video-js vjs-big-play-centered" width="1280" height="720" controls="controls" playsinline)
