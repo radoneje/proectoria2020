@@ -140,7 +140,9 @@ h6 {
     align-items: center;
     justify-content: center;
     padding-bottom: 116px;
-    margin-top: var(--bigPad);
+    margin-top: calc(var(--bigPad) );
+    padding-top:var(--bigPad) ;
+
 }
 
 .bigLogo svg {
@@ -257,12 +259,15 @@ h6 {
     align-items: center;
     margin-bottom: 10px;
 }
-
+.pgmDayItems{
+    width: calc(100% - 338px);
+}
 .pgmDayItemText {
     font-weight: 400;
     font-size: 35px;
     line-height: 43px;
     padding-left: 1em;
+    text-transform: uppercase;
 }
 
 .pgmDayDivider {
@@ -509,8 +514,9 @@ h6 {
 
 .orgDecor2 {
     position: absolute;
-    bottom: -272px;
-    left: 56%;
+
+    bottom: -338px;
+    left: 18%;
 }
 
 .orgDecorIco {
@@ -576,8 +582,8 @@ h6 {
 
 .footerText {
     font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
+    font-size: 32px;
+    line-height: 92px;
 }
 
 .hidden {
@@ -607,6 +613,7 @@ h6 {
 @media screen and (max-width: 1440px) {
     .bigLogo {
         margin-top: 0;
+        padding-top:0 ;
     }
 
     .headMenu {
@@ -645,9 +652,7 @@ h6 {
         top: -155px;
     }
 
-    .orgDecor2 {
-        bottom: -265px;
-    }
+
 
     .mapBox {
         padding-top: var(--bigPad)
@@ -724,8 +729,8 @@ h6 {
     }
 
     .orgDecor2 {
-        bottom: -235px;
-        left: 74%;
+        bottom: -322px;
+        left: 23%;
     }
 
     .org {
@@ -875,6 +880,9 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
+    .pgmDayItems{
+        width: calc(100% );
+    }
     .orgTriangle {
         top: -1px;
     }
@@ -890,10 +898,8 @@ h6 {
     }
 
     .orgDecor2 {
-        bottom: -215px;
-        left: inherit;
-        right: -123px;
-        z-index: 1;
+        bottom: -294px;
+        left: 30%;
     }
 
     .orgImage {
