@@ -25,6 +25,11 @@
     --thiangleHeight: 176px;
 }
 
+.video-js .vjs-big-play-button {
+    font-size: 8em;
+    border-radius: 0;
+}
+
 .mainTower {
     max-width: 1920px;
     width: 100vw;
@@ -581,6 +586,20 @@ h6 {
 }
 .showMobile{display: none}
 .hideMobile{ display: block }
+
+@keyframes r {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(90deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(270deg);}
+    100% { transform: rotate(360deg);}
+}
+#rotate{
+    transform: rotate(1498deg);
+    transform-origin: 67% 47%;
+    animation: r 120s infinite;
+    transition: transform 60s linear;
+}
 
 @media screen and (max-width: 1440px) {
     .bigLogo {
