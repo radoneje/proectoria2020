@@ -112,8 +112,7 @@ h6 {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding: calc(10px);
-    padding-bottom: 0;
+    padding: 12px 10px;
     font-weight: 700;
     font-size: 22px;
 
@@ -584,6 +583,10 @@ h6 {
 .hidden {
     display: none;
 }
+.headMenuItem{
+    display: flex;
+    align-items: center;
+}
 .showMobile{display: none}
 .hideMobile{ display: block }
 
@@ -776,7 +779,7 @@ h6 {
 
     #modalMenu {
         position: fixed;
-        z-index: 1000;
+        z-index: 3000;
         top: 0;
         right: 0;
         left: 0;
@@ -839,10 +842,18 @@ h6 {
 
     .themeItem {
         width: calc(50% - 20px);
+        padding: 16px 20px;
     }
 
+
     .themeItem svg {
-        width: 100%
+        width: 100%;
+        transform: scale(1.15);
+        height: auto;
+    }
+    .themeBoxMobile {
+
+        padding-bottom: calc(var(--thiangleHeight) + var(--bigPad));
     }
 
     .footerText {
@@ -890,7 +901,7 @@ h6 {
     }
 
 
-
+    .
 
 }
 
@@ -903,7 +914,8 @@ h6 {
     }
 
     .bigLogo svg {
-        height: 75vw;
+        height: auto;
+        margin-top: 100px;
     }
 
     .pgmTitle {
@@ -1011,6 +1023,7 @@ h6 {
 
     .themeItem {
         padding: 20px 20px;
+
     }
 
     .playerBox {
@@ -1046,6 +1059,7 @@ h6 {
     .pgm .playerTitle {
         left: -98px !important;
     }
+
 }
 @media screen and (max-width: 600px) {
     .pgmBodyTitle {
@@ -1063,8 +1077,12 @@ h6 {
         font-size: 18px;
         line-height: 25px;
     }
-    .pgmDayBody{
-        margin-top:60px ;
+    .pgmDayTitle svg {
+        height: 24px;
+        width: auto;
+    }
+    .pgmDayBody {
+        margin-top: var(--bigPad)
     }
     .pgmDecor svg {
         width: 85px;
@@ -1093,7 +1111,8 @@ h6 {
         display: none;
     }
     .themeItem {
-        padding: 0px 20px;
+
+        padding: 16px 20px;
     }
     .mapTitle {
         top: 90px;
