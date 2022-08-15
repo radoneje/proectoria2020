@@ -1,6 +1,6 @@
 "use strict";
 (()=> {
-    let player = videojs('mainVideo');
+    //let player = videojs('mainVideo');
 
     document.querySelectorAll(".modalMenuItem").forEach(elem=>{
         elem.addEventListener("click",()=>{
