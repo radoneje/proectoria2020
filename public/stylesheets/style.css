@@ -24,6 +24,16 @@
     --bigPad: 60px;
     --thiangleHeight: 176px;
 }
+.tst{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 1px;
+    background: yellow;
+    z-index: 50000;
+    left: 42px;
+    display: none;
+}
 
 .video-js .vjs-big-play-button {
     font-size: 8em;
@@ -912,6 +922,33 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
+
+    .pgmTitle {
+        left: -33px
+    }
+    .pgm .playerTitle {
+        left: -68px !important;
+    }
+
+
+
+    .themeTitle{
+        left: -55px !important;
+    }
+    .orgTitle{
+        left: -130px !important;
+    }
+    .partTitle {
+        margin-left: -34px !important;
+    }
+    .mapTitle{
+        left: -34px !important;
+    }
+    .contactsTitle{
+        left: -30px !important;
+    }
+
+
     .showMobile{display: block}
     .hideMobile{ display: none }
     :root {
@@ -953,7 +990,7 @@ h6 {
 
     .pgmTitle {
         top: -44px;
-        left: -78px;
+
         z-index: 100;
     }
 
@@ -961,9 +998,7 @@ h6 {
         height: 60px;
     }
 
-    .pgm .playerTitle {
-        left: 20px !important;
-    }
+
 
     .bigLogo {
         padding-bottom: 75px;
@@ -1062,35 +1097,34 @@ h6 {
     .mapImage svg{
         width: 100%;
     }
-    .pgm .playerTitle {
-        left: -98px !important;
-    }
+
+
 
 }
 @media screen and (max-width: 600px) {
     .pgmTitle {
-     left: -113px;
+     left: -111px;
     }
     .pgm .playerTitle {
-        left: -142px !important;
+        left: -139px !important;
     }
     .pgmTitle svg, .partTitle svg {
         height: 40px;
     }
     .themeTitle{
-        left: -130px !important;
+        left: -132px !important;
     }
     .orgTitle{
-        left: -128px !important;
+        left: -130px !important;
     }
     .partTitle {
-        margin-left: -104px !important;
+        margin-left: -106px !important;
     }
     .mapTitle{
-        left: -109px !important;
+        left: -110px !important;
     }
     .contactsTitle{
-        left: -99px !important;
+        left: -101px !important;
     }
 
         .footerLogo svg {
@@ -1137,9 +1171,59 @@ h6 {
     .pgm .playerTitle {
         left: -132px !important;
     }
-    .playerMenuItem:before, .playerMenuItem:after{
-        display: none;
+    .playerMenuItem{
+        font-size: 14px;
+        line-height: 14px;
+        width: min-content;
     }
+    .playerMenuItem.active {
+        padding: 24px 35px;
+
+    }
+
+    #playerMenuItem1 {
+        padding: 12px 12px;
+        padding-right: 44px;
+    }
+
+    .playerMenuItem.active {
+        padding: 16px 12px;
+    }
+
+    #playerMenuItem1:after {
+        border-width: 0 0 56px 39px;
+        right: -38px;
+    }
+
+    #playerMenuItem1:before {
+        left: -38px;
+        border-width: 0 0 56px 39px;
+    }
+
+    #playerMenuItem2 {
+        padding: 12px 12px;
+        padding-left: 32px;
+    }
+
+    #playerMenuItem1.active {
+
+        padding-bottom: 28px;
+    }
+
+    #playerMenuItem2.active {
+        padding-right: 12px;
+        padding-bottom: 24px;
+    }
+
+    #playerMenuItem1.active:before {
+        border-width: 0 0 69px 39px;
+    }
+
+    #playerMenuItem1.active:after {
+        border-width: 0 0 69px 39px;
+    }
+
+
     .themeItem {
 
         padding: 16px 20px;
