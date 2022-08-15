@@ -1207,7 +1207,7 @@ h6 {
 
     #playerMenuItem1.active {
 
-        padding-bottom: 28px;
+        padding-bottom: 24px;
     }
 
     #playerMenuItem2.active {
@@ -1216,12 +1216,13 @@ h6 {
     }
 
     #playerMenuItem1.active:before {
-        border-width: 0 0 69px 39px;
+        border-width: 0 0 65px 39px;
     }
 
     #playerMenuItem1.active:after {
-        border-width: 0 0 69px 39px;
+        border-width: 0 0 65px 39px;
     }
+
 
 
     .themeItem {
