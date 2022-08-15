@@ -34,12 +34,15 @@
             return
         e.target.classList.toggle("active");
         document.getElementById("playerMenuItem2").classList.toggle("active");
+
+        initPlayer(e.target.getAttribute("iframe"))
     })
     document.getElementById("playerMenuItem2").addEventListener("click", (e) => {
         if (e.target.classList.contains("active"))
             return
         e.target.classList.toggle("active");
         document.getElementById("playerMenuItem1").classList.toggle("active");
+        initPlayer(e.target.getAttribute("iframe"))
     })
     document.querySelectorAll(".mainMenuItem").forEach(elem=>{
         elem.addEventListener("click",()=>{
@@ -50,6 +53,7 @@
             scrollToSmoothly(top-100,300)
         })
     })
+    initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
 })();
 function scrollToSmoothly(pos, time) {
     var currentPos = window.pageYOffset;
@@ -75,5 +79,8 @@ function closeMobileMenu(){
     document.getElementById("modalMenu").classList.add("hidden");
     document.body.classList.remove("overflowHidden")
 
+}
+function initPlayer(iframeUrl){
+    document.querySelector(".videoWrapper").innerHTML=iframeUrl;
 }
 

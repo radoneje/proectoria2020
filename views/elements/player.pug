@@ -14,9 +14,9 @@
             include svg/playerArchive.svg
     .playerBox#player
         .playerMenu
-            .playerMenuItem.pointer#playerMenuItem1.active ДЛЯ УЧАЩИХСЯ
-            .playerMenuItem.pointer#playerMenuItem2 ДЛЯ ПЕДАГОГОВ
+            .playerMenuItem.pointer#playerMenuItem1.active(iframe='<iframe width="720" height="405" src="https://rutube.ru/play/embed/3cb868e98249c583ef756aec91be37a7" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  ') ДЛЯ УЧАЩИХСЯ
+            .playerMenuItem.pointer#playerMenuItem2(iframe='<iframe width="720" height="405" src="https://rutube.ru/play/embed/3cb868e98249c583ef756aec91be37a7" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  ') ДЛЯ ПЕДАГОГОВ
         .playerItem
             .videoWrapper
-                <iframe width="720" height="405" src="https://rutube.ru/play/embed/3cb868e98249c583ef756aec91be37a7" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                //video#mainVideo( class="video-js vjs-big-play-centered" width="1280" height="720" controls="controls" playsinline)
+                //<iframe width="720" height="405" src="https://rutube.ru/play/embed/3cb868e98249c583ef756aec91be37a7" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                video#mainVideo( class="video-js vjs-big-play-centered" width="1280" height="720" controls="controls" playsinline)
