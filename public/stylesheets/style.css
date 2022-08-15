@@ -605,7 +605,7 @@ h6 {
 }
 #rotate{
     transform: rotate(1498deg);
-    transform-origin: 67% 47%;
+    transform-origin: 69.7% 48.3%;
     animation: r 120s infinite;
     transition: transform 60s linear;
 }
@@ -1068,6 +1068,10 @@ h6 {
 
 }
 @media screen and (max-width: 600px) {
+
+        .footerLogo svg {
+            width: 300px;
+        }
     .pgmBodyTitle {
         font-size: 23px;
         line-height: 32px;
