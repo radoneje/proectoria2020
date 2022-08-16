@@ -353,7 +353,7 @@ h6 {
     height: 0;
 }
 
-.videoWrapper iframe, .videoWrapper video, #mainVideo {
+.videoWrapper iframe, .videoWrapper video, #mainVideo, .videoWrapper img.zatichka {
     position: absolute;
     top: 0;
     left: 0;
