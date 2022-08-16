@@ -1,7 +1,7 @@
 "use strict";
 (()=> {
     let player = videojs('mainVideo');
-    //initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
+    initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
 
     document.querySelectorAll(".modalMenuItem").forEach(elem=>{
         elem.addEventListener("click",()=>{
@@ -82,6 +82,7 @@ function closeMobileMenu(){
 
 }
 function initPlayer(iframeUrl){
+    return;
     document.querySelector(".videoWrapper").innerHTML=iframeUrl;
 }
 
