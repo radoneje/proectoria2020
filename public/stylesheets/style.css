@@ -623,7 +623,7 @@ h6 {
     display: flex;
     align-items: center;
     align-content: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: var(--bigPad);
     flex-wrap: wrap;
 }
