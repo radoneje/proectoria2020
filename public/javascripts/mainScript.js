@@ -1,24 +1,26 @@
 "use strict";
-(()=> {
+(() => {
     let player = videojs('mainVideo');
-    initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
+    let elem = document.querySelector(".playerMenuItem.active")
+    if (elem)
+        initPlayer(elem.getAttribute("iframe"))
 
-    document.querySelectorAll(".modalMenuItem").forEach(elem=>{
-        elem.addEventListener("click",()=>{
+    document.querySelectorAll(".modalMenuItem").forEach(elem => {
+        elem.addEventListener("click", () => {
             closeMobileMenu();
-            let el= document.querySelector('#'+elem.getAttribute("href"));
+            let el = document.querySelector('#' + elem.getAttribute("href"));
             var bodyRect = document.body.getBoundingClientRect(),
                 elemRect = el.getBoundingClientRect(),
-                top   = elemRect.top - bodyRect.top;
-            scrollToSmoothly(top-100,300)
+                top = elemRect.top - bodyRect.top;
+            scrollToSmoothly(top - 100, 300)
         })
     })
 
-    document.querySelectorAll(".logoToTop").forEach(e=>{
+    document.querySelectorAll(".logoToTop").forEach(e => {
         e.addEventListener("click", (e) => {
-        closeMobileMenu();
-        scrollToSmoothly(0,300)
-    })
+            closeMobileMenu();
+            scrollToSmoothly(0, 300)
+        })
 
     })
     document.getElementById("closeMobileMenu").addEventListener("click", (e) => {
@@ -45,21 +47,22 @@
         document.getElementById("playerMenuItem1").classList.toggle("active");
         initPlayer(e.target.getAttribute("iframe"))
     })
-    document.querySelectorAll(".mainMenuItem").forEach(elem=>{
-        elem.addEventListener("click",()=>{
-            let el= document.querySelector('#'+elem.getAttribute("href"));
+    document.querySelectorAll(".mainMenuItem").forEach(elem => {
+        elem.addEventListener("click", () => {
+            let el = document.querySelector('#' + elem.getAttribute("href"));
             var bodyRect = document.body.getBoundingClientRect(),
                 elemRect = el.getBoundingClientRect(),
-                top   = elemRect.top - bodyRect.top;
-            scrollToSmoothly(top-100,300)
+                top = elemRect.top - bodyRect.top;
+            scrollToSmoothly(top - 100, 300)
         })
     })
 
 })();
+
 function scrollToSmoothly(pos, time) {
     var currentPos = window.pageYOffset;
     var start = null;
-    if(time == null) time = 500;
+    if (time == null) time = 500;
     pos = +pos, time = +time;
     window.requestAnimationFrame(function step(currentTime) {
         start = !start ? currentTime : start;
@@ -76,13 +79,15 @@ function scrollToSmoothly(pos, time) {
         }
     });
 }
-function closeMobileMenu(){
+
+function closeMobileMenu() {
     document.getElementById("modalMenu").classList.add("hidden");
     document.body.classList.remove("overflowHidden")
 
 }
-function initPlayer(iframeUrl){
+
+function initPlayer(iframeUrl) {
     return;
-    document.querySelector(".videoWrapper").innerHTML=iframeUrl;
+    document.querySelector(".videoWrapper").innerHTML = iframeUrl;
 }
 
