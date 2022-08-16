@@ -1,6 +1,12 @@
 "use strict";
 (() => {
-    let player = videojs('mainVideo');
+    let player;
+    try {
+        let player = videojs('mainVideo');
+    }
+    catch (e){
+        console.warn(e)
+    }
     let elem = document.querySelector(".playerMenuItem.active")
     if (elem)
         initPlayer(elem.getAttribute("iframe"))
