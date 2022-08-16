@@ -1,6 +1,7 @@
 "use strict";
 (()=> {
-    //let player = videojs('mainVideo');
+    let player = videojs('mainVideo');
+    //initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
 
     document.querySelectorAll(".modalMenuItem").forEach(elem=>{
         elem.addEventListener("click",()=>{
@@ -53,7 +54,7 @@
             scrollToSmoothly(top-100,300)
         })
     })
-    initPlayer(document.querySelector(".playerMenuItem.active").getAttribute("iframe"))
+
 })();
 function scrollToSmoothly(pos, time) {
     var currentPos = window.pageYOffset;
