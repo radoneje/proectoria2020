@@ -619,6 +619,28 @@ h6 {
     animation: r 120s infinite;
     transition: transform 60s linear;
 }
+.orgImageWr{
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    padding: var(--bigPad);
+    flex-wrap: wrap;
+}
+.orgImageItem{
+    height: 160px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.orgImageItem img{
+    height: 100%;
+    width: auto;
+
+}
+.partBox .orgImageItem{
+    height: 130px;
+
+}
 
 @media screen and (max-width: 1440px) {
     .bigLogo {
@@ -1234,6 +1256,15 @@ h6 {
     }
     .contactsBox {
         padding-bottom: 30px;
+    }
+    .orgImageItem{
+        height: 108px;
+    }
+    .partBox .orgImageItem{
+        height:80px;
+    }
+    .orgBox .orgImageWr {
+        margin-bottom: 60px;
     }
 }
 
