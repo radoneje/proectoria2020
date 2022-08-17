@@ -1,24 +1,24 @@
 :root {
     --blue1: #264795;
-    --blue2: #0D5FAA;
+    --blue2: #1760aa;
     --blue3: #3D7FBB;
-    --blue4: #00B0EA;
-    --blue5: #00A6E0;
+    --blue4: #1760aa;
+    --blue5: #1eafe6;
     --blue6: #C2E9F8;
     --gray: #B7B6B6;
     --green1: #006A88;
     --green2: #8ACED2;
     --green3: #88CCD0;
     --green4: #B6DEE1;
-    --green5: #4CBBB8;
-    --red1: #EB5752;
-    --red2: #FF7171;
-    --red3: #FF8888;
+    --green5: #4fbbb7;
+    --red1: #eb5953;
+    --red2: #f28f89;
+    --red3: #F28F89;
     --red4: #FF7777;
     --red5: #FF9999;
     --red6: #FFAAAA;
     --red7: #FFBBBB;
-    --red7: #FFCCCC;
+
     --red9: #FFDDDD;
     --white: #ffffff;
     --bigPad: 60px;
@@ -235,7 +235,7 @@ h6 {
 }
 
 .firstDay {
-    color: #4CBBB8
+    color: #4FBBB7
 }
 
 .secondDay {
@@ -304,7 +304,7 @@ h6 {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #4CBBB8;
+    background-color: #4FBBB7;
     background-image: url(/images/playerBg.svg);
     background-position: 34% 58%;
     background-repeat: no-repeat;
@@ -375,7 +375,7 @@ h6 {
 }
 
 #playerMenuItem1 {
-    background: var(--red2);
+    background: var(--red1);
     padding-right: 66px
 }
 
@@ -388,7 +388,7 @@ h6 {
     height: 0;
     border-style: solid;
     border-width: 0 0 102px 60px;
-    border-color: transparent transparent var(--red2) transparent;
+    border-color: transparent transparent var(--red1) transparent;
 }
 
 #playerMenuItem1:after {
@@ -400,7 +400,7 @@ h6 {
     height: 0;
     border-style: solid;
     border-width: 0 0 102px 60px;
-    border-color: transparent transparent transparent var(--red2);
+    border-color: transparent transparent transparent var(--red1);
 }
 
 #playerMenuItem1.active:after {
@@ -408,7 +408,7 @@ h6 {
 }
 
 #playerMenuItem2 {
-    background: var(--blue2);
+    background: var(--blue1);
     padding-left: 58px;
 
 }
@@ -426,7 +426,7 @@ h6 {
     height: 0;
     border-style: solid;
     border-width: 0 0 102px 60px;
-    border-color: transparent transparent var(--blue2) transparent;
+    border-color: transparent transparent var(--blue1) transparent;
 }
 
 .playerDecor1 {
@@ -1150,6 +1150,9 @@ h6 {
 
 }
 @media screen and (max-width: 600px) {
+    .mapBox {
+        padding-bottom: 60px;
+    }
     .pgmTitle {
      left: -111px;
     }
