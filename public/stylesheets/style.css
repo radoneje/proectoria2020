@@ -495,7 +495,25 @@ h6 {
     width: 100%;
     height: var(--thiangleHeight);
     background-image: linear-gradient(to right bottom, var(--blue2) 0%, var(--blue2) 50%, transparent 50%);
-    z-index: 0;
+    z-index: 5;
+}
+.orgTriangle2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--thiangleHeight);
+    background-image: linear-gradient(to left top, var(--white) 0%, var(--white) 50%, transparent 50%);
+    z-index: 8;
+}
+.orgDecor {
+    position: absolute;
+    top: -148px;
+    left: 56%;
+    z-index: 7;
+}
+.orgTitle{
+    z-index: 10;
 }
 
 .orgImage img {
@@ -516,11 +534,7 @@ h6 {
     margin-left: var(--bigPad);
 }
 
-.orgDecor {
-    position: absolute;
-    top: -148px;
-    left: 56%;
-}
+
 
 .orgDecor2 {
     position: absolute;
@@ -772,6 +786,18 @@ h6 {
 }
 
 @media screen and (max-width: 1100px) {
+    .partBox .orgImageItem{
+        height: 180px;
+    }
+    .orgImageItem  {
+        box-sizing: border-box;
+        padding-bottom: 60px;
+        width: 50%;
+        text-align: center;
+        height: 200px;
+        box-sizing: border-box;
+    }
+
     .playerDecor2 {
         display: none;
     }
@@ -930,7 +956,7 @@ h6 {
     }
 
     .orgDecor2 {
-        bottom: -294px;
+        bottom: -236px;
         left: 30%;
     }
 
@@ -1257,14 +1283,19 @@ h6 {
     .contactsBox {
         padding-bottom: 30px;
     }
-    .orgImageItem{
-        height: 108px;
-    }
     .partBox .orgImageItem{
-        height:80px;
+        height: 130px;
+    }
+    .orgImageItem  {
+        box-sizing: border-box;
+        padding-bottom: 60px;
+        width: 50%;
+        text-align: center;
+        height: 150px;
+        box-sizing: border-box;
     }
     .orgBox .orgImageWr {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 
