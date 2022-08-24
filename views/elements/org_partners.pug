@@ -11,20 +11,20 @@
             include svg/orgDecor2.svg
 
     .orgBox
-        .orgImageWr
-            each i in [1, 2, 3, 4]
-                .orgImageItem
-                    img(src="/images/org"+i+".png")
+        .orgImageWr.partImageWr
+            .partImage(style="padding: 0px 4%;")
+                img(src="/images/allOrgs.png")
+
             //img.hideMobile(src="/images/org.png" alt="Организаторы")
             //img.showMobile(src="/images/orgMobile.png" alt="Организаторы")
     .partBox#partners
         .partTitle
             include svg/part.svg
     .partBox
-        .orgImageWr
-            each i in [1, 2, 3, 4]
-                .orgImageItem
-                    img(src="/images/part" + i + ".png")
+        .orgImageWr.partImageWr
+            .partImage
+                img(src="/images/allPart.png")
+
         //.orgImage
             img.hideMobile(src="/images/part.png" alt="Партнеры")
             img.showMobile(src="/images/partMobile.png" alt="Партнеры")

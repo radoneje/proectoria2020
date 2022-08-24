@@ -63,6 +63,16 @@
         })
     })
 
+    document.querySelectorAll(".playerMenu2Item").forEach(elem => {
+        console.log("click", elem)
+        elem.addEventListener("click", (e) => {
+            let id=e.target.getAttribute("playerid")
+                console.log("click", id)
+;           document.querySelector(".playerMenu2").setAttribute("activeplayer", id)
+
+        })
+    })
+
 })();
 
 function scrollToSmoothly(pos, time) {
