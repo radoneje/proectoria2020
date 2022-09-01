@@ -527,7 +527,7 @@ h6 {
 }
 
 .partBox {
-    margin-top: 100px
+    margin-top: 180px
 }
 
 .partTitle {
@@ -681,6 +681,30 @@ h6 {
 }
 .partBox .orgImageItem{
     height: 130px;
+
+}
+.pgmDayItemButtons{
+    display: flex;
+    margin-bottom: 1em;
+    margin-left: 75px;
+    margin-top: -0.5em;
+
+}
+.pgmDayItemButton{
+   color: white;
+    background-color: var(--green5);
+    margin-right: calc(var(--bigPad) / 2);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    padding: calc(var(--bigPad) / 8) calc(var(--bigPad) / 4);
+    text-transform: uppercase;
+
+}
+.pgmDayItemButton.red{
+    color: white;
+    background-color: var(--red2);
 
 }
 
@@ -1013,7 +1037,7 @@ h6 {
         left: -55px !important;
     }
     .orgTitle{
-        left: -130px !important;
+     //   left: -130px !important;
     }
     .partTitle {
         margin-left: -34px !important;
@@ -1160,7 +1184,7 @@ h6 {
         padding-bottom: 40px;
     }
     .partBox {
-        margin-top: 0;
+        margin-top: 100px;
     }
     .mapTitle{
         top:90px;
@@ -1181,7 +1205,10 @@ h6 {
 
 }
 @media screen and (max-width: 600px) {
+    .pgmDayItemButtons {
 
+        margin-left: 35px;
+    }
     .mapBox {
         padding-bottom: 60px;
     }
