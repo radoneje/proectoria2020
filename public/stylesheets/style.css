@@ -707,6 +707,14 @@ h6 {
     background-color: var(--red2);
 
 }
+.pgmDayItemButton:hover{
+    background-color: var(--green1);
+}
+.pgmDayItemButton.red:hover{
+    color: white;
+    background-color: var(--red1);
+
+}
 
 @media screen and (max-width: 1440px) {
     .bigLogo {
