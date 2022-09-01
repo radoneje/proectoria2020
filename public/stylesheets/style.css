@@ -700,6 +700,7 @@ h6 {
     font-weight: normal;
     padding: calc(var(--bigPad) / 8) calc(var(--bigPad) / 4);
     text-transform: uppercase;
+    transition:  background-color .2s linear;
 
 }
 .pgmDayItemButton.red{
