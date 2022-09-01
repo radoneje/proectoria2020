@@ -1001,6 +1001,10 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
+    .orgImageWr{
+        padding-top: var(--bigPad);
+
+    }
     .pgmDayItems{
         width: calc(100% );
     }
