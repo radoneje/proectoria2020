@@ -661,6 +661,7 @@ h6 {
     align-content: flex-start;
     //justify-content: space-evenly;
     padding: var(--bigPad);
+    padding-top: 0;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 0;
