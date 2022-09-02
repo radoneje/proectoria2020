@@ -351,6 +351,7 @@ h6 {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    background-color: var(--white);
 }
 
 .videoWrapper iframe, .videoWrapper video, #mainVideo, .videoWrapper img.zatichka {
