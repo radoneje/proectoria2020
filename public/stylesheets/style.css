@@ -622,6 +622,67 @@ h6 {
 .partImage, .partImage img{
     width:100%
 }
+.adminPanel{
+    padding: var(--bigPad);
+}
+.aBox {
+    display: flex;
+}
+.aBoxColumn{
+    width: 33.3%;
+}
+.aPlayerMunuItem{
+    padding: 20px;
+
+
+}
+.redBg{
+    color: white;
+    background-color: var(--red2);
+
+}
+.greenBg{
+    color: white;
+    background-color: var(--green1);
+}
+.grayBg{
+    background-color: var(--gray);
+}
+.aFlexCenter{
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.aBorderBottom{
+    border-bottom: 2px solid black;
+}
+.aButton{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    background-color: var(--blue2);
+    width: max-content;
+}
+.aPlayerMunuItem select{
+    font-size: 16px;
+    padding: 8px;
+}
+.aPlayerMunuItem textarea{
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    height: 8em;
+    padding: 0.5em;
+    font-size: 16px;
+}
+.aPlayerMunuItem textarea[readonly]{
+    color:red;
+    background-color: yellow;
+}
+
 .playerMenu2{
     display: flex;
     align-items: center;

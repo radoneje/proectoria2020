@@ -1,16 +1,8 @@
 "use strict";
 (() => {
-    let player;
-    try {
-        let player = videojs('mainVideo');
-    }
-    catch (e){
-        console.warn(e)
-    }
-    let elem = document.querySelector(".playerMenuItem.active")
-    if (elem)
-        initPlayer(elem.getAttribute("iframe"))
 
+    initPlayer()
+    updateStatus();
     document.querySelectorAll(".modalMenuItem").forEach(elem => {
         elem.addEventListener("click", () => {
             closeMobileMenu();
@@ -27,14 +19,11 @@
             closeMobileMenu();
             scrollToSmoothly(0, 300)
         })
-
     })
     document.getElementById("closeMobileMenu").addEventListener("click", (e) => {
         closeMobileMenu();
-
     })
     document.getElementById("mobileHamburger").addEventListener("click", (e) => {
-
         document.getElementById("modalMenu").classList.remove("hidden");
         document.body.classList.add("overflowHidden")
     })
@@ -44,14 +33,14 @@
         e.target.classList.toggle("active");
         document.getElementById("playerMenuItem2").classList.toggle("active");
 
-        initPlayer(e.target.getAttribute("iframe"))
+        initPlayer()
     })
     document.getElementById("playerMenuItem2").addEventListener("click", (e) => {
         if (e.target.classList.contains("active"))
             return
         e.target.classList.toggle("active");
         document.getElementById("playerMenuItem1").classList.toggle("active");
-        initPlayer(e.target.getAttribute("iframe"))
+        initPlayer()
     })
     document.querySelectorAll(".mainMenuItem").forEach(elem => {
         elem.addEventListener("click", () => {
@@ -64,15 +53,12 @@
     })
 
     document.querySelectorAll(".playerMenu2Item").forEach(elem => {
-        console.log("click", elem)
         elem.addEventListener("click", (e) => {
             let id=e.target.getAttribute("playerid")
-                console.log("click", id)
 ;           document.querySelector(".playerMenu2").setAttribute("activeplayer", id)
-
+            initPlayer()
         })
     })
-
 })();
 
 function scrollToSmoothly(pos, time) {
@@ -101,9 +87,37 @@ function closeMobileMenu() {
     document.body.classList.remove("overflowHidden")
 
 }
-
-function initPlayer(iframeUrl) {
-    return;
-    document.querySelector(".videoWrapper").innerHTML = iframeUrl;
+function initPlayer() {
+    let playerSect=1;
+    if(document.getElementById("playerMenuItem2").classList.contains("active"))
+        playerSect=2;
+    let playerId=1;
+    try {
+        playerId = parseInt(document.querySelector(".playerMenu2").getAttribute("activeplayer")) + 1;
+    }
+    catch (e){
+        console.warn(e);
+    }
+    document.querySelector(".videoWrapper").innerHTML = status["player"+playerId+''+playerSect];
+    console.log("update player")
 }
+async function updateStatus(){
+    let response=await fetch("/getJson");
+    if (response.ok) {
+        let json = await response.json();
+        if(json.player11!=status.player11 ||
+            json.player12!=status.player12 ||
+            json.player21!=status.player21 ||
+            json.player22!=status.player22
+        ){
+            status=json;
+            initPlayer();
+        }
+
+    } else {
+        console.warn("HTTP error: " + response.status);
+    }
+    setTimeout(async ()=>{await updateStatus()},60*1000);
+}
+
 

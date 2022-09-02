@@ -1,0 +1,122 @@
+extends layout
+block head
+    link(rel='stylesheet', href='/stylesheets/video-js.css')
+    <meta property="og:title" content="ФЕДЕРАЛЬНЫЙ ФОРУМ ПРОФОРИЕНТАЦИИ «ПРОЕКТОРИЯ»" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://proektforum.ru" />
+    <meta property="og:image" content="https://proektforum.ru/logo.png" />
+    <meta property="og:description" content="Форум собирает лучших школьников со всей страны, которые уже успешно реализуют свои проекты" />
+    <meta name="description" content="Форум «ПРОЕКТОРИЯ 2022» собирает лучших школьников со всей страны, которые уже успешно реализуют свои проекты"/>
+block content
+    .mainTower(style="font-family: 'Proxima Nova Rg';")
+        .adminPanel
+            h4 плейер
+            .aBox
+                .aBoxColumn
+                .aBoxColumn
+                    .aPlayerMunuItem.redBg  ДЛЯ УЧАЩИХСЯ
+                .aBoxColumn
+                    .aPlayerMunuItem.greenBg  ДЛЯ ПЕДАГОГОВ
+            .aBox
+                .aBoxColumn
+                .aBoxColumn
+                    .aPlayerMunuItem.redBg
+                        select#select1
+                            option(selected value="0") заглушка
+                            option( value="1") Плейер основной VK
+
+                            option( value="3") Плейер  резерв
+                .aBoxColumn
+                    .aPlayerMunuItem.greenBg
+                        select#select2
+                            option(selected value="0") заглушка
+                            option( value="1") Плейер основной VK
+
+                            option( value="3") Плейер  резерв
+            .aBox
+                .aBoxColumn.grayBg.aFlexCenter.aBorderBottom
+                    .aBoxColumnTitle Плейер основной VK
+                .aBoxColumn.aBorderBottom#11
+                    .aPlayerMunuItem.redBg
+                        textarea#textarea11
+                        .aButton(onclick="showPreview(11)") Предпросмотр
+                .aBoxColumn.aBorderBottom#12
+                    .aPlayerMunuItem.greenBg
+                        textarea#textarea12
+                        .aButton(onclick="showPreview(12)") Предпросмотр
+            .aBox
+                .aBoxColumn.grayBg.aFlexCenter.aBorderBottom
+                    .aBoxColumnTitle Плейер  второй RUTUBE
+                .aBoxColumn.aBorderBottom#21
+                    .aPlayerMunuItem.redBg
+                        textarea#textarea21
+                        .aButton(onclick="showPreview(21)") Предпросмотр
+                .aBoxColumn.aBorderBottom#22
+                    .aPlayerMunuItem.greenBg
+                        textarea#textarea22
+                        .aButton(onclick="showPreview(22)") Предпросмотр
+            .aBox
+                .aBoxColumn.grayBg.aFlexCenter.aBorderBottom
+                    .aBoxColumnTitle Плейер резерв
+                .aBoxColumn.aBorderBottom#31
+                    .aPlayerMunuItem.redBg
+                        textarea#textarea31
+                        .aButton(onclick="showPreview(31)") Предпросмотр
+                .aBoxColumn.aBorderBottom#32
+                    .aPlayerMunuItem.greenBg
+                        textarea#textarea32
+                        .aButton(onclick="showPreview(32)") Предпросмотр
+            .playerItem(style="margin:40px; width:360px")
+                .videoWrapper#videoWrapper
+    div !{(dt)}
+    script.
+        let json=!{dt};
+        [1,2].forEach(i=>{
+            document.getElementById("select"+i).value=json["selected"+i];
+            [1,2,3].forEach(j=>{
+            document.getElementById("textarea"+j+i).value=json["txt"+j+i];
+            })
+            lockInput(document.getElementById("select"+i), i)
+        });
+        [1,2].forEach((sect)=>{
+            let select=document.getElementById("select"+sect);
+            select.addEventListener("change", ()=>{
+                lockInput(select, sect)
+                saveJson();
+            })
+        })
+        document.querySelectorAll("textarea").forEach(e=>{
+                e.addEventListener("change", (e)=>{saveJson()});
+        })
+        function showPreview(id){
+            document.getElementById("videoWrapper").innerHTML=document.getElementById("textarea"+id).value;
+
+        }
+        async function saveJson(){
+            let json={
+                selected1:document.getElementById("select1").value,
+                selected2:document.getElementById("select2").value,
+            }
+            for(let i=1; i<=3; i++)
+                for(let j=1; j<=2; j++){
+                    console.log("textarea"+i+j)
+                    json["txt"+i+""+j]=document.getElementById("textarea"+i+j).value
+                }
+            await fetch("/setJson", {method:'POST',body:JSON.stringify(json), headers:{'Content-type':'application/json;charset=utf-8'}})
+            console.log(json);
+        }
+        function lockInput(select, sect){
+            for (let i = 1; i <= 3; i++) {
+                let input = document.querySelector("#textarea" + i + "" + sect + "");
+                input.removeAttribute("readonly")
+                if (i == select.value)
+                    input.setAttribute("readonly", "readonly")
+                if (i == 2 && select.value == 1)
+                    input.setAttribute("readonly", "readonly")
+            }
+        }
+
+
+
+
+
