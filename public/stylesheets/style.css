@@ -352,6 +352,9 @@ h6 {
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     background-color: var(--white);
+    background-image: url('/images/loader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .videoWrapper iframe, .videoWrapper video, #mainVideo, .videoWrapper img.zatichka {
