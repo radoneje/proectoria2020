@@ -757,7 +757,8 @@ h6 {
 
 }
 .pgmDayItemButton{
-   color: white;
+    min-width: 125px;
+    color: white;
     background-color: var(--green5);
     margin-right: calc(var(--bigPad) / 2);
     cursor: pointer;
