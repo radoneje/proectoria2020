@@ -1067,6 +1067,7 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
+
     .orgImageWr{
         padding-top: var(--bigPad);
 
@@ -1237,10 +1238,13 @@ h6 {
         border-width: 0 0 69px 39px;
     }
 
+    .pgmDownloadIco svg {
+        height: 50px;
+        width: auto;
+    }
     .pgmDownload {
-
-        right: -30px;
-
+        right: 20px;
+        top: 45px;
     }
 
     .themeItem {
