@@ -2,7 +2,7 @@
 (() => {
 
     initPlayer()
-    updateStatus();
+   // updateStatus();
     document.querySelectorAll(".modalMenuItem").forEach(elem => {
         elem.addEventListener("click", () => {
             closeMobileMenu();
